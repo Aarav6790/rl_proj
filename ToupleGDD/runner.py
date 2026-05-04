@@ -58,7 +58,7 @@ class Runner:
                     #   the number of deep walk training iterations
                     if time_usage and (id(self.env.graphs[g_idx]) not in self.agent.graph_node_embed):
                         start_time = time.time()
-                        self.agent.graph_node_embed[id(self.env.graphs[g_idx])] = models.get_init_node_embed(self.env.graphs[g_idx], 0, self.agent.device) # epochs for initial embedding
+                        self.agent.graph_node_embed[id(self.env.graphs[g_idx])] = models.get_init_node_embed(self.env.graphs[g_idx], 10, self.agent.device) # epochs for initial embedding
                         print(f'Time of generating initial embedding for {self.env.graphs[g_idx].path_graph}: {time.time()-start_time:.2f} seconds')
                         
                     if time_usage:

@@ -342,7 +342,7 @@ def get_init_node_embed(graph, num_epochs, device):
     ''' use deep walk to generate initial node embedding 
         according to the graph structure (node connection and edge weight)
     '''
-    model = DeepWalkNeg(graph, embedding_dim=50, walk_length=3, r_hop=5, r_hop_size=5, 
+    model = DeepWalkNeg(graph, embedding_dim=50, walk_length=3, r_hop=1, r_hop_size=5, 
         walks_per_node=50, num_negative_samples=5, restart=0.15, sparse=True).to(device)
 
     loader = model.loader(batch_size=32, shuffle=True, num_workers=4)
