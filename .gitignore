@@ -1,0 +1,16 @@
+# Large data files
+actual_graph.txt
+top_5000_communities.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# OS
+.DS_Store
+
+# Git backups
+_git_backup/
